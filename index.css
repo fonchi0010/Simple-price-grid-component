@@ -1,0 +1,147 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /*Background Color*/
+    --GrayishBlue: hsl(218, 22%, 67%);
+    /*Box Above Color*/
+    --LightGray: hsl(204, 43%, 93%);
+    /*Box Bottom Color*/
+    --LightCyan: hsl(179, 62%, 50%);
+    --Cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+    /*Logo*/
+    --DeepBlue: hsl(228, 45%, 44%);
+}
+
+body{
+    font-family: 'Karla', sans-serif;
+    background: var(--GrayishBlue);
+    font-size: 16px;
+    padding: 20px;
+}
+.container{
+    background: var(--LightGray);
+    border-radius: 10px;
+}
+.logo{
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    background: white;
+    background: linear-gradient(45deg, blue, black);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.container > article:first-child {
+    padding: 32px;
+}
+.container > article:first-child h1{
+    color: var(--Cyan);
+    margin-bottom: 16px;
+}
+.above-subtitle{
+    color: var(--BrightYellow);
+}
+.container > article:first-child p{
+    margin-bottom: 16px;
+}
+p, li{
+    line-height: 20px;
+}
+.container > article:first-child p:last-child{
+    color: var(--GrayishBlue);
+}
+.container  section{
+    display: flex;
+    flex-direction: column;
+}
+.container section article{
+    padding: 32px;
+    color: white;
+}
+.container section article:first-child{
+    background: var(--Cyan);  
+}
+.container section article:first-child h3{
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+.container section article:first-child h3 span{
+    font-size: 32px;
+    font-weight: 700;
+    margin-right: 16px;
+}
+.container section article:first-child p{
+    margin: 16px 0;
+}
+
+.container section article:last-child{
+    background: var(--LightCyan);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.container section article:last-child h2{
+    margin-bottom: 5px;
+}
+.container section article:last-child ul{
+    list-style-type: none;
+    opacity: 0.7;
+}
+.sign{
+    background-color: var(--BrightYellow);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 10px 20px 23px rgba(0,0,0, 0.3);
+    width: 100%;
+}
+
+@media (min-width: 768px){
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    .logo{
+        position: absolute;
+        top: 30px;
+        font-size: 40px;
+        font-weight: 700;       
+    }
+    .container{
+        width: 700px;
+        margin: auto;
+    }
+    .container > article:first-child h1{
+        font-size: 32px;
+    }
+    .container section{
+        flex-direction: row;
+    }
+    .container section article:first-child{
+        flex: 1;
+        border-bottom-left-radius: 10px;
+    }
+    .container section article:last-child{
+        flex: 1;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 10px;
+    }
+
+}
